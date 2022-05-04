@@ -1,8 +1,9 @@
 import React from 'react'
+import Hamlet from '../components/Hamlet'
 
 const Product = () => {
   return (
-    <div>Product</div>
+    <Hamlet title='Product'>Product</Hamlet>
   )
 }
 

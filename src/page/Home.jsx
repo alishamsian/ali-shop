@@ -1,8 +1,9 @@
 import React from 'react'
+import Hamlet from '../components/Hamlet'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Hamlet title="Home">Home</Hamlet>
   )
 }
 

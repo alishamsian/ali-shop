@@ -11,8 +11,8 @@ const mainNav = [
     link: "/",
   },
   {
-    display: "Caltalog",
-    link: "/caltalog",
+    display: "Catalog",
+    link: "/catalog",
   },
   {
     display: "About",

@@ -6,14 +6,16 @@ import PolicyCard from "../components/PolicyCard";
 import Section, { SectionBody, SectionTitle } from "../components/Section";
 import Grid from "../components/Grid";
 import { Link } from "react-router-dom";
- 
+
 import productData from "../assets/fake-data/products";
 import ProductCard from "../components/ProductCard";
+
+import banner from "../assets/images/blackfriday-banner.png";
 
 const Home = () => {
   return (
     <Hamlet title="Home">
-      <HeaderBaner color="blue" />
+      <HeaderBaner color="orange" />
 
       {/* policy section */}
       <Section>
@@ -54,6 +56,55 @@ const Home = () => {
       </Section>
 
       {/* end best section */}
+      {/* new arrival section */}
+      <Section>
+        <SectionTitle>New Arrival</SectionTitle>
+        <SectionBody>
+          <Grid col={4} mdCol={2} smCol={1} gap={20}>
+            {productData.getProducts(8).map((item, index) => (
+              <ProductCard
+                key={index}
+                img01={item.image01}
+                img02={item.image02}
+                name={item.title}
+                price={Number(item.price)}
+                slug={item.slug}
+              />
+            ))}
+          </Grid>
+        </SectionBody>
+      </Section>
+      {/* end new arrival section */}
+
+      {/* banner */}
+      <Section>
+        <SectionBody>
+          <Link to="/catalog">
+            <img className="banner-bottom" src={banner} alt="banner" />
+          </Link>
+        </SectionBody>
+      </Section>
+      {/* end banner */}
+
+      {/* popular product section */}
+      <Section>
+        <SectionTitle>popular product</SectionTitle>
+        <SectionBody>
+          <Grid col={4} mdCol={2} smCol={1} gap={20}>
+            {productData.getProducts(12).map((item, index) => (
+              <ProductCard
+                key={index}
+                img01={item.image01}
+                img02={item.image02}
+                name={item.title}
+                price={Number(item.price)}
+                slug={item.slug}
+              />
+            ))}
+          </Grid>
+        </SectionBody>
+      </Section>
+      {/* end popular product section */}
     </Hamlet>
   );
 };

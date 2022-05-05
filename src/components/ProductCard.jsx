@@ -22,6 +22,7 @@ const ProductCard = props => {
         </Link>
         <div className="product-card__btn">
             <Button
+            backgroundColor='orange'
             size="sm"
             icon="bx bx-cart"
             animate={true}

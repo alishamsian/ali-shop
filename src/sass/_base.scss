@@ -29,6 +29,9 @@ a:hover {
 img {
     max-width: 100%;
 }
+.banner-bottom {
+  width: 100%;
+}
 
 @each $color, $val in $colors {
     .color-#{$color} {

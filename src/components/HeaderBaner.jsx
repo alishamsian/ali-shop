@@ -1,3 +1,5 @@
+import  Button  from "./Button";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import headerBaner from "../assets/images/header-baner.png";
 
@@ -20,7 +22,15 @@ const HeaderBaner = (props) => {
             </span>
           </div>
           <div className="header-baner__item__info__btn">
-            <Link to="/"></Link>
+            <Link to="/">
+              <Button
+                backgroundColor={props.color}
+                icon="bx bx-cart"
+                animate={true}
+              >
+                Read more
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="header-baner__item__image">
@@ -31,6 +41,10 @@ const HeaderBaner = (props) => {
       </div>
     </div>
   );
+};
+
+HeaderBaner.propTypes = {
+  color: PropTypes.string.isRequired,
 };
 
 export default HeaderBaner;

@@ -1,11 +1,19 @@
 .product {
   @include flex(flex-start, flex-start);
 
+  @include tablet {
+    flex-direction: column; 
+  }
+
   &__images {
     @include flex(flex-start, flex-start);
 
     width: 60%;
     flex-wrap: wrap;
+
+    @include tablet {
+      width: 100%;
+    }
 
     &__list {
       width: 20%;
@@ -38,6 +46,11 @@
     top: $header-shrink-height;
     padding-top: 2rem;
     text-align: start;
+
+    @include mobile {
+      position: relative;
+      top: unset;
+    }
 
     &__title {
       font-size: 2.5rem;
@@ -73,6 +86,11 @@
           cursor: pointer;
           margin-right: 1rem;
 
+          @include mobile {
+            width: 40px;
+            height: 40px;
+          }
+
           &.active{
               border-color: $main-color;
           }
@@ -88,6 +106,12 @@
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
+
+            @include mobile {
+              width: 30px;
+              height: 30px;
+            }
+
           }
           &__size{
               font-size: 1.5rem;
@@ -129,6 +153,18 @@
   height: 400px;
   overflow: hidden;
   position: relative;
+
+  @include mobile {
+    display: none
+  }
+
+  &.mobile{
+    display: none;
+
+    @include mobile{
+      display: block;
+    }
+  }
 
   &.expand {
     height: max-content;

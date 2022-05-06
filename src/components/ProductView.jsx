@@ -30,8 +30,31 @@ const ProductView = (props) => {
     setQuantity(1);
     setColor(undefined);
     setSize(undefined);
-  }, [product])
-  
+  }, [product]);
+
+  const check = () => {
+    if (color === undefined) {
+      alert("Please select a color");
+      return false;
+    }
+    if (size === undefined) {
+      alert("Please select a size");
+      return false;
+    }
+    return true;
+  };
+
+  const addToCart = () => {
+    if (check()) {
+      props.addToCart(product, quantity, color, size);
+    }
+  };
+
+  const goToCart = () => {
+    if (check()) {
+      props.history.push("/cart");
+    }
+  };
 
   return (
     <div className="product">
@@ -133,8 +156,25 @@ const ProductView = (props) => {
           </div>
         </div>
         <div className="product__info__item">
-            <Button>Add to cart</Button>
-            <Button>Buy</Button>
+          <Button onClick={() => goToCart()}>Add to cart</Button>
+          <Button onClick={() => addToCart()}>Buy</Button>
+        </div>
+        <div
+          className={`product-description mobile ${descriptionExpand ? "expand" : ""}`}
+        >
+          <div className="product-description__title">Lorem, ipsum dolor.</div>
+          <div
+            className="product-description__content"
+            dangerouslySetInnerHTML={{ __html: product.description }}
+          />
+          <div className="product-description__toggle">
+            <Button
+              size="sm"
+              onClick={() => setDescriptionExpand(!descriptionExpand)}
+            >
+              {descriptionExpand ? "Hide" : "Show"}
+            </Button>
+          </div>
         </div>
       </div>
     </div>

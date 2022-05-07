@@ -5,8 +5,15 @@ import Button from "./Button";
 import numberWithCommas from "../utils/numberWithCommas";
 import { useEffect } from "react";
 
-const ProductView = (props) => {
-  const product = props.product;
+const ProductView = props => {
+  let product = props.product;
+
+  if (product === undefined) product = {
+    price: 0,
+    title: "",
+    colors: [],
+    size: [],
+  };
 
   const [previewImg, setPreviewImg] = useState(product.image01);
 
@@ -182,7 +189,7 @@ const ProductView = (props) => {
 };
 
 ProductView.propTypes = {
-  product: PropTypes.object.isRequired,
+  product: PropTypes.object,
 };
 
 export default ProductView;

@@ -1,22 +1,22 @@
 const policy =[
     {
-        name: 'Policy 1',
-        description: 'Policy 1 description',
+        name: 'کیفیت',
+        description: 'بهترین کیفیت محصول',
         icon: "bx bx-shopping-bag",
     },
     {
-        name: 'Policy 2',
-        description: 'Policy 2 description',
+        name: 'پرداخت',
+        description: 'پرداخت آنلاین ',
         icon: "bx bx-credit-card",
     },
     {
-        name: 'Policy 3',
-        description: 'Policy 3 description',
+        name: 'ضمانت',
+        description: 'ضمانت اصل بودن کالا',
         icon: "bx bx-diamond",
     },
     {
-        name: 'Policy 4',
-        description: 'Policy 4 description',
+        name: 'پرداخت امن',
+        description: 'پرداخت با تمامی کارتها',
         icon: "bx bx-donate-heart",
     }
 ] 

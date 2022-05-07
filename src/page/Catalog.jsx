@@ -20,7 +20,7 @@ const Catalog = () => {
             <i className="bx bx-left-arrow-alt"></i>
           </div>
           <div className="catalog__filter__widget">
-            <div className="catalog__filter__widget__title">filter</div>
+            <div className="catalog__filter__widget__title">رنگ</div>
             <div className="catalog__filter__widget__content">
               {category.map((item, index) => (
                 <p className="catalog__filter__widget__content__item" key={index}>{item.display}</p>
@@ -28,7 +28,7 @@ const Catalog = () => {
             </div>
           </div>
           <div className="catalog__filter__widget">
-            <div className="catalog__filter__widget__title">filter</div>
+            <div className="catalog__filter__widget__title">اندازه</div>
             <div className="catalog__filter__widget__content">
               {category.map((item, index) => (
                 <p className="catalog__filter__widget__content__item" key={index}>{item.display}</p>
@@ -36,7 +36,7 @@ const Catalog = () => {
             </div>
           </div>
           <div className="catalog__filter__widget">
-            <div className="catalog__filter__widget__title">filter</div>
+            <div className="catalog__filter__widget__title">مدل</div>
             <div className="catalog__filter__widget__content">
               {category.map((item, index) => (
                 <p className="catalog__filter__widget__content__item" key={index}>{item.display}</p>

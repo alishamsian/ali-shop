@@ -86,7 +86,7 @@ const ProductView = props => {
         <div
           className={`product-description ${descriptionExpand ? "expand" : ""}`}
         >
-          <div className="product-description__title">Lorem, ipsum dolor.</div>
+          <div className="product-description__title">تیشرت زنانه</div>
           <div
             className="product-description__content"
             dangerouslySetInnerHTML={{ __html: product.description }}
@@ -109,7 +109,7 @@ const ProductView = props => {
           </span>
         </div>
         <div className="product__info__item">
-          <div className="product__info__item__title">Color</div>
+          <div className="product__info__item__title">رنگ</div>
           <div className="product__info__item__list">
             {product.colors.map((item, index) => (
               <div
@@ -125,7 +125,7 @@ const ProductView = props => {
           </div>
         </div>
         <div className="product__info__item">
-          <div className="product__info__item__title">Size</div>
+          <div className="product__info__item__title">سایز</div>
           <div className="product__info__item__list">
             {product.size.map((item, index) => (
               <div
@@ -143,7 +143,7 @@ const ProductView = props => {
           </div>
         </div>
         <div className="product__info__item">
-          <div className="product__info__item__title">Number</div>
+          <div className="product__info__item__title">تعداد</div>
           <div className="product__info__item__quantity">
             <div
               className="product__info__item__quantity__btn"
@@ -163,13 +163,13 @@ const ProductView = props => {
           </div>
         </div>
         <div className="product__info__item">
-          <Button onClick={() => goToCart()}>Add to cart</Button>
-          <Button onClick={() => addToCart()}>Buy</Button>
+          <Button onClick={() => goToCart()}>افزودن به سبد خرید</Button>
+          <Button onClick={() => addToCart()}>خرید</Button>
         </div>
         <div
           className={`product-description mobile ${descriptionExpand ? "expand" : ""}`}
         >
-          <div className="product-description__title">Lorem, ipsum dolor.</div>
+          <div className="product-description__title">محصولات مشابه.</div>
           <div
             className="product-description__content"
             dangerouslySetInnerHTML={{ __html: product.description }}

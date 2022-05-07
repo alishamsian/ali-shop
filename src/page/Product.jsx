@@ -21,7 +21,7 @@ const Product = props => {
       </Section>
       <Section>
         <SectionTitle>
-          loerm ipsum dolor sit amet
+          محصولات مشابه
         </SectionTitle>
         <SectionBody>
         <Grid col={4} mdCol={2} smCol={1} gap={20}>

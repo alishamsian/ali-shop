@@ -35,7 +35,7 @@ const ProductCard = props => {
             animate={true}
             onClick={() => dispatch(setValue(props.slug)) }
             >
-                Read More
+                اطلاعات بیشتر
             </Button>
         </div>
     </div>

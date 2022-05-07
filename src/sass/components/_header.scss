@@ -48,14 +48,14 @@
       font-size: 1.5rem;
 
       &__item ~ &__item {
-          margin-left: 39px;
+          margin-right: 39px;
 
           @include tablet {
-              margin-left: 20px;
+              margin-right: 20px;
           }
 
           @include mobile {
-              margin-left: 10px;
+              margin-right: 10px;
           }
       }
 
@@ -74,7 +74,7 @@
           height: 100%;
       }
 
-      &__right {
+      &__left {
           font-size: 2.25rem;
 
           &__item {
@@ -90,7 +90,7 @@
           }
       }
 
-      &__left {
+      &__right {
           &__close {
               display: none;
           }
@@ -113,7 +113,7 @@
               }
 
               &__item ~ &__item {
-                  margin-left: unset;
+                  margin-right: unset;
                   margin-top: 20px;
               }
 

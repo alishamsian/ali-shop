@@ -38,7 +38,7 @@ const Home = () => {
       {/* best section */}
 
       <Section>
-        <SectionTitle>Best products</SectionTitle>
+        <SectionTitle>بهترین محصولات هفته</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {productData.getProducts(4).map((item, index) => (
@@ -58,7 +58,7 @@ const Home = () => {
       {/* end best section */}
       {/* new arrival section */}
       <Section>
-        <SectionTitle>New Arrival</SectionTitle>
+        <SectionTitle>محصولات جدید</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {productData.getProducts(8).map((item, index) => (
@@ -88,7 +88,7 @@ const Home = () => {
 
       {/* popular product section */}
       <Section>
-        <SectionTitle>popular product</SectionTitle>
+        <SectionTitle>محصولات پرطرفدار</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {productData.getProducts(12).map((item, index) => (

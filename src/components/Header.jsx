@@ -7,19 +7,19 @@ import logo from "../assets/images/logo.png";
 
 const mainNav = [
   {
-    display: "Home",
+    display: "صفحه اصلی",
     link: "/",
   },
   {
-    display: "Catalog",
+    display: "محصولات",
     link: "/catalog",
   },
   {
-    display: "About",
+    display: "درباره ما",
     link: "/about",
   },
   {
-    display: "Contact",
+    display: "ارتباط با ما",
     link: "/contact",
   },
 ];
@@ -46,10 +46,10 @@ const Header = () => {
     }
   }, []);
 
-  const menuLeft = useRef(null);
+  const menuRight = useRef(null);
 
   const menuToggle = () => {
-    menuLeft.current.classList.toggle("active");
+    menuRight.current.classList.toggle("active");
   }
 
   return (
@@ -62,17 +62,17 @@ const Header = () => {
         </div>
         <div className="header__menu">
           <div className="header__menu__mobile-toggle" onClick={menuToggle}>
-            <i className="bx bx-menu-alt-left"></i>
+            <i className="bx bx-menu-alt-right"></i>
           </div>
-          <div className="header__menu__left" ref={menuLeft}>
-            <div className="header__menu__left__close" onClick={menuToggle}>
+          <div className="header__menu__right" ref={menuRight}>
+            <div className="header__menu__right__close" onClick={menuToggle}>
               <i className="bx bx-chevron-left"></i>
             </div>
             {mainNav.map((item, index) => (
               <div
                 key={index}
                 onClick={menuToggle}
-                className={`header__menu__left__item header__menu__item ${
+                className={`header__menu__right__item header__menu__item ${
                   index === activeNav ? "active" : ""
                 }`}
               >
@@ -82,16 +82,16 @@ const Header = () => {
               </div>
             ))}
           </div>
-          <div className="header__menu__right">
-            <div className="header_menu__right__item header__menu__item">
+          <div className="header__menu__left">
+            <div className="header_menu__left__item header__menu__item">
               <i className="bx bx-search"></i>
             </div>
-            <div className="header_menu__right__item header__menu__item ">
+            <div className="header_menu__left__item header__menu__item ">
               <Link to="/cart">
                 <i className="bx bx-shopping-bag"></i>
               </Link>
             </div>
-            <div className="header__menu__right__item header__menu__item">
+            <div className="header__menu__left__item header__menu__item">
               <Link to="/login">
                 <i className="bx bx-user"></i>
               </Link>
